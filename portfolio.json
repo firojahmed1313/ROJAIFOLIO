@@ -1,0 +1,196 @@
+{
+  "personal": {
+    "name": "MD Firoj Ahmed",
+    "title": "Full Stack Developer",
+    "tagline": "Building enterprise-grade systems with .NET, C# & modern web tech.",
+    "shortBio": "1+ year professional experience at MNC. CSE graduate passionate about clean architecture, scalable APIs, and pixel-perfect UIs.",
+    "email": "firoj.ahmed@example.com",
+    "phone": "+880 1700-000000",
+    "location": "Dhaka, Bangladesh",
+    "profileImage": "./45947.png",
+    "resumeUrl": "#",
+    "socials": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com"
+    }
+  },
+  "about": {
+    "bio": "I'm MD Firoj Ahmed, a dedicated Full-Stack Developer with 1+ year of professional experience at an MNC, where I primarily worked with .NET and C# in enterprise-level applications. I enjoy building scalable, maintainable, and user-focused web applications. My CSE background gives me strong foundations in algorithms, system design, and software engineering principles.",
+    "interests": ["Web Development", "Open Source", "System Design", "Cloud Architecture", "UI/UX Design", "Tech Blogs"],
+    "funFact": "Refactored a legacy .NET codebase that cut API response time by 60% — with all tests still green!",
+    "skills": {
+      "Languages": ["C#", "JavaScript", "TypeScript", "Python", "SQL", "HTML5", "CSS3"],
+      "Frontend": ["React", "Next.js", "Tailwind CSS", "Redux", "Axios", "Bootstrap"],
+      "Backend": [".NET Core", "ASP.NET MVC", "Entity Framework", "REST APIs", "Node.js", "Express.js"],
+      "Databases": ["SQL Server", "PostgreSQL", "MongoDB", "Redis"],
+      "Tools": ["Git", "GitHub", "Docker", "Azure DevOps", "Postman", "Visual Studio", "VS Code", "Jira"]
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "type": "complete",
+      "title": "Enterprise Task Management System",
+      "description": "Full-featured project management platform for enterprise teams. Role-based access, real-time notifications via SignalR, Kanban boards, and reporting dashboards.",
+      "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+      "tech": ["ASP.NET Core", "C#", "React", "SQL Server", "SignalR", "Azure"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "type": "complete",
+      "title": "E-Commerce Platform API",
+      "description": "Robust RESTful API backend supporting multi-vendor architecture with JWT auth, Stripe payment integration, inventory management, and order tracking.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "tech": [".NET 7", "Entity Framework", "SQL Server", "Stripe API", "Redis", "Docker"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "type": "complete",
+      "title": "Healthcare Appointment Portal",
+      "description": "Secure portal for scheduling healthcare appointments. Patients book, reschedule, cancel. Doctors view schedules and patient history with encrypted data handling.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+      "tech": ["Next.js", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "type": "small",
+      "title": "CLI Portfolio Generator",
+      "description": "Node.js command-line tool that scaffolds a developer portfolio from a config JSON, generating a static HTML site with one command.",
+      "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80",
+      "tech": ["Node.js", "JavaScript", "CLI", "Handlebars"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "type": "small",
+      "title": "Real-time Weather Dashboard",
+      "description": "Responsive dashboard fetching live data from OpenWeatherMap API with forecasts, humidity, wind speed, and UV index chart visualizations.",
+      "image": "https://images.unsplash.com/photo-1504608524841-42584120d693?w=800&q=80",
+      "tech": ["React", "Chart.js", "OpenWeatherMap API", "Tailwind CSS"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "type": "small",
+      "title": "Markdown Blog Engine",
+      "description": "Lightweight static blog that parses Markdown files with search, categories, and RSS feed. Renders as a fully navigable blog site.",
+      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
+      "tech": ["Next.js", "TypeScript", "gray-matter", "remark", "Tailwind CSS"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "type": "experience",
+      "title": "Junior Software Developer",
+      "organization": "MNC Enterprise Solutions",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "Jan 2024",
+      "endDate": "Present",
+      "description": "Enterprise web applications with ASP.NET Core and C#. REST API development, SQL Server optimization, React frontend integration. Agile cross-functional collaboration."
+    },
+    {
+      "id": 2,
+      "type": "training",
+      "title": "Full Stack .NET Developer Bootcamp",
+      "organization": "BITM — BASIS Institute",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "Jul 2023",
+      "endDate": "Dec 2023",
+      "description": "6-month intensive on ASP.NET Core, Entity Framework, SQL Server, and React. Real-world projects with senior industry mentorship."
+    },
+    {
+      "id": 3,
+      "type": "education",
+      "title": "B.Sc. Computer Science & Engineering",
+      "organization": "University of Dhaka",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "2019",
+      "endDate": "2023",
+      "description": "Algorithms, data structures, software engineering, database management, computer networks. Programming contests and open-source contributions."
+    },
+    {
+      "id": 4,
+      "type": "education",
+      "title": "Higher Secondary Certificate (HSC)",
+      "organization": "Dhaka College",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "2017",
+      "endDate": "2019",
+      "description": "Science group, GPA 5.00. Mathematics, Physics, and Information & Communication Technology."
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Microsoft Azure Fundamentals",
+      "issuer": "Microsoft",
+      "date": "March 2024",
+      "credentialUrl": "#",
+      "badge": "AZ-900",
+      "color": "#0078D4"
+    },
+    {
+      "id": 2,
+      "title": "ASP.NET Core Developer",
+      "issuer": "LinkedIn Learning",
+      "date": "November 2023",
+      "credentialUrl": "#",
+      "badge": "Backend",
+      "color": "#0A66C2"
+    },
+    {
+      "id": 3,
+      "title": "React — The Complete Guide",
+      "issuer": "Udemy",
+      "date": "September 2023",
+      "credentialUrl": "#",
+      "badge": "Frontend",
+      "color": "#A435F0"
+    },
+    {
+      "id": 4,
+      "title": "SQL Server Performance Tuning",
+      "issuer": "Pluralsight",
+      "date": "June 2024",
+      "credentialUrl": "#",
+      "badge": "Database",
+      "color": "#F15B2A"
+    },
+    {
+      "id": 5,
+      "title": "Docker for Developers",
+      "issuer": "freeCodeCamp",
+      "date": "August 2023",
+      "credentialUrl": "#",
+      "badge": "DevOps",
+      "color": "#2496ED"
+    },
+    {
+      "id": 6,
+      "title": "JS Algorithms & Data Structures",
+      "issuer": "freeCodeCamp",
+      "date": "May 2023",
+      "credentialUrl": "#",
+      "badge": "CS",
+      "color": "#0A0A23"
+    }
+  ]
+}

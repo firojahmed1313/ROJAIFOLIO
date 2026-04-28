@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Firoj Ahmed // Full Stack Developer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <a href="#home" class="nav-logo">
+    <span class="bracket">[</span>firoj<span class="bracket">]</span>
+    <span class="cursor-blink"></span>
+  </a>
+  <div class="nav-pills" id="navPills">
+    <a href="#home" class="nav-pill active">~</a>
+    <a href="./about.html" class="nav-pill">about</a>
+    <a href="./projects.html" class="nav-pill">projects</a>
+    <a href="./timeline.html" class="nav-pill">timeline</a>
+    <a href="./certificates.html" class="nav-pill">certificates</a>
+    <a href="./contact.html" class="nav-pill">contact</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-status">open to work</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="nav-pill">~ home</a>
+  <a href="#about" class="nav-pill">about</a>
+  <a href="#projects" class="nav-pill">projects</a>
+  <a href="#experience" class="nav-pill">timeline</a>
+  <a href="#certificates" class="nav-pill">certs</a>
+  <a href="#contact" class="nav-pill">contact</a>
+</div>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+// ── SVG Icons ──
+const Icons = {
+  Github: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>,
+  Linkedin: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>,
+  Twitter: ()=><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>,
+  Arrow: ()=><svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>,
+  External: ()=><svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>,
+  Star: ()=><svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>,
+  Mail: ()=><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>,
+  Phone: ()=><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.12 1.22 2 2 0 012.1.0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>,
+  Pin: ()=><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>,
+  Up: ()=><svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>,
+  Send: ()=><svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>,
+};
+
+// ── Reusable: SectionHeader ──
+const SectionHeader = ({tag, title, hi, sub, light=true}) => (
+  <div style={{marginBottom:48}}>
+    <div className="sec-label">{tag}</div>
+    <h2 className="sec-h2">{title}{hi && <span className="hi">{hi}</span>}</h2>
+    {sub && <p className="sec-sub">{sub}</p>}
+  </div>
+);
+
+// ── Reusable: TimelineItem ──
+const TimelineItem = ({item, idx}) => {
+  const dotCls = item.type==='education'?'edu':item.type==='training'?'training':'';
+  const badgeCls = item.type==='experience'?'tl-exp':item.type==='education'?'tl-edu':'tl-train';
+  const label = item.type==='experience'?'// exp':item.type==='education'?'// edu':'// training';
+  return (
+    <div className="tl-item reveal" style={{transitionDelay:`${idx*0.1}s`}}>
+      <div className={`tl-dot ${dotCls}`}/>
+      <div className="tl-card">
+        <div className="tl-top">
+          <span className={`tl-badge ${badgeCls}`}>{label}</span>
+          <span className="tl-date">{item.startDate} → {item.endDate}</span>
+        </div>
+        <div className="tl-title">{item.title}</div>
+        <div className="tl-org">{item.organization} <span style={{color:'var(--text3)',fontWeight:400}}>· {item.location}</span></div>
+        <p className="tl-desc">{item.description}</p>
+      </div>
+    </div>
+  );
+};
+
+// ── HERO Section ──
+const Hero = ({personal, projects, certificates}) => {
+  // Show top 1-3 projects (responsive handled via CSS grid)
+  const previewProjects = projects.filter(p=>p.featured).slice(0,3);
+  const previewCerts = certificates.slice(0,3);
+
+  return (
+    <section className="hero" id="home">
+      <div className="hero-grid"/>
+      <div className="orb orb-1"/>
+      <div className="orb orb-2"/>
+
+      <div className="hero-inner">
+        {/* LEFT */}
+        <div>
+          <div className="terminal-chip">
+            status --available-for-hire<span className="typed-cursor">|</span>
+          </div>
+
+          <h1 className="hero-name">{personal.name}</h1>
+          <div className="hero-role">
+            <span style={{color:'var(--text3)'}}>{'>'}</span>
+            {personal.title}
+            <span className="sep">/</span>
+            <span style={{color:'var(--purple)'}}>1+ yr exp</span>
+          </div>
+          <p className="hero-tag">
+            {personal.tagline} Building with{' '}
+            <code>.NET</code>, <code>C#</code> & <code>React</code>.
+          </p>
+
+          <div className="cta-row">
+            <a href="./contact.html" className="btn btn-cyan">
+              <Icons.Mail/> Let's Talk
+            </a>
+            <a href="#projects" className="btn btn-ghost">
+              <span style={{fontFamily:'var(--mono)'}}>{'<'}</span>View Work<span style={{fontFamily:'var(--mono)'}}>{'>'}</span>
+            </a>
+            <a href={personal.resumeUrl} className="btn btn-ghost" target="_blank" rel="noopener">
+              Resume.pdf
+            </a>
+          </div>
+
+          <div className="social-row">
+            {[
+              {href:personal.socials.github, icon:<Icons.Github/>},
+              {href:personal.socials.linkedin, icon:<Icons.Linkedin/>},
+              {href:personal.socials.twitter, icon:<Icons.Twitter/>},
+            ].map((s,i)=>(
+              <a key={i} href={s.href} className="soc-btn" target="_blank" rel="noopener">{s.icon}</a>
+            ))}
+            <span style={{display:'flex',alignItems:'center',gap:8,marginLeft:8,fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--text3)'}}>
+              <span style={{color:'var(--text3)'}}>located_in:</span>
+              <span style={{color:'var(--cyan)'}}>{personal.location}</span>
+            </span>
+          </div>
+
+          {/* ── QUICK PREVIEW ── */}
+          <div className="preview-section">
+            <div className="preview-label">// quick_preview</div>
+
+            {/* About Me mini */}
+            <div className="about-preview reveal">
+              <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:10}}>
+                <span style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--cyan)'}}>about.md</span>
+                <a href="#about" className="view-all-link" style={{fontSize:'0.65rem'}}>read more <Icons.Arrow/></a>
+              </div>
+              <p className="about-preview-text about-preview-bio">{personal.shortBio}</p>
+              <div className="skill-chips">
+                {["ASP.NET Core","C#","React","SQL Server","TypeScript","Docker"].map((s,i)=>(
+                  <span key={i} className="skill-chip">{s}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Top Projects preview */}
+            <div style={{marginTop:16}}>
+              <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:10}}>
+                <span style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--cyan)'}}>projects[] <span style={{color:'var(--text3)'}}>// top {previewProjects.length}</span></span>
+                <a href="./projects.html" className="view-all-link" style={{fontSize:'0.65rem'}}>view all <Icons.Arrow/></a>
+              </div>
+              <div className="preview-grid">
+                {previewProjects.map((p,i)=>(
+                  <a key={p.id} href="#projects" className="preview-card reveal" style={{transitionDelay:`${i*0.08}s`}}>
+                    <img src={p.image} alt={p.title} className="preview-img" loading="lazy"/>
+                    <div className="preview-body">
+                      <div className="preview-type">_{String(p.id).padStart(2,'0')} // {p.type}</div>
+                      <div className="preview-title">{p.title}</div>
+                      <div className="preview-tags">
+                        {p.tech.slice(0,3).map((t,ti)=><span key={ti} className="ptag">{t}</span>)}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Top Certs preview */}
+            <div style={{marginTop:16}}>
+              <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:10}}>
+                <span style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--cyan)'}}>certificates[] <span style={{color:'var(--text3)'}}>// top {previewCerts.length}</span></span>
+                <a href="./certificates.html" className="view-all-link" style={{fontSize:'0.65rem'}}>view all <Icons.Arrow/></a>
+              </div>
+              <div className="cert-preview-grid">
+                {previewCerts.map((c,i)=>(
+                  <div key={c.id} className="cert-prev-card reveal" style={{transitionDelay:`${i*0.08}s`}}>
+                    <div className="cert-prev-bar" style={{background:`linear-gradient(90deg,${c.color},transparent)`}}/>
+                    <span className="cert-prev-badge">{c.badge}</span>
+                    <div className="cert-prev-title">{c.title}</div>
+                    <div className="cert-prev-issuer" style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--text3)'}}>{c.issuer} · {c.date}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT: developer.cs card + profile photo floating over it */}
+        <div style={{position:'relative',display:'flex',flexDirection:'column',alignItems:'center'}}>
+
+          {/* Wrapper with extra top padding so photo can overlap above */}
+          <div style={{position:'relative',width:'100%'}}>
+
+            {/* ── Profile photo — floats top-right, bleeds like Figma ── */}
+            <div style={{
+              width: '100%', aspectRatio: '1 / 1',
+              marginBottom: 16,
+              borderRadius:14,overflow:'hidden',
+              position: 'relative',
+              animation: 'slide-up 0.8s 0.2s ease both'
+            }}>
+              {/* Photo */}
+              <img
+                src={personal.profileImage}
+                alt={personal.name}
+                loading="lazy"
+                style={{
+                  width:'100%',height:'100%',
+                  objectFit:'cover',objectPosition:'top center',
+                  display:'block',
+                  filter:'grayscale(25%) brightness(0.72) contrast(1.1) blur(0.4px)',
+                }}
+              />
+              {/* Bottom fade — bleeds into card */}
+              <div style={{
+                position:'absolute',bottom:0,left:0,right:0,height:'45%',zIndex:2,
+                background:'linear-gradient(to top,var(--surface) 0%,transparent 100%)',
+              }}/>
+              {/* Online badge */}
+              <div style={{
+                position:'absolute',bottom:8,left:'50%',transform:'translateX(-50%)',zIndex:4,
+                display:'flex',alignItems:'center',gap:5,
+                background:'rgba(0,255,136,0.1)',border:'1px solid rgba(0,255,136,0.25)',
+                borderRadius:100,padding:'3px 9px',whiteSpace:'nowrap',
+              }}>
+                <div style={{width:5,height:5,borderRadius:'50%',background:'var(--green)',flexShrink:0}}/>
+                <span style={{fontFamily:'var(--mono)',fontSize:'0.55rem',color:'var(--green)'}}>online</span>
+              </div>
+            </div>
+
+            {/* ── developer.cs code card ── */}
+            <div className="hero-card">
+              <div className="card-titlebar">
+                <div className="dot dot-r"/><div className="dot dot-y"/><div className="dot dot-g"/>
+                <span className="card-filename">developer.cs</span>
+              </div>
+              <div className="code-lines">
+                {[
+                  <><span className="ln">1</span><span className="kw">public class</span> <span className="cn">Developer</span></>,
+                  <><span className="ln">2</span>{'{'}</>,
+                  <><span className="ln">3</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_name</span> = <span className="str">"MD Firoj Ahmed"</span>;</>,
+                  <><span className="ln">4</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str">"Full Stack Dev"</span>;</>,
+                  <><span className="ln">5</span></>,
+                  <><span className="ln">6</span>&nbsp;&nbsp;<span className="cm">// Core expertise</span></>,
+                  <><span className="ln">7</span>&nbsp;&nbsp;<span className="fn">List</span>{'<string>'} <span className="prop">Skills</span> = <span className="kw">new</span>{'()'} {'{'}</>,
+                  <><span className="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;<span className="str">".NET Core"</span>, <span className="str">"C#"</span>, <span className="str">"React"</span>,</>,
+                  <><span className="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;<span className="str">"SQL Server"</span>, <span className="str">"Docker"</span></>,
+                  <><span className="ln">10</span>&nbsp;&nbsp;{'};'}</>,
+                  <><span className="ln">11</span></>,
+                  <><span className="ln">12</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">ExperienceYears</span> = <span className="num">1</span>;</>,
+                  <><span className="ln">13</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">bool</span> <span className="prop">IsAvailable</span> = <span className="cn">true</span>;</>,
+                  <><span className="ln">14</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Projects</span> = <span className="num">6</span>;</>,
+                  <><span className="ln">15</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Certs</span> = <span className="num">6</span>;</>,
+                  <><span className="ln">16</span>{'}'}</>,
+                ].map((line,i)=>(
+                  <div key={i} style={{display:'block',whiteSpace:'pre'}}>{line}</div>
+                ))}
+              </div>
+              <div className="profile-strip">
+                {/* Small avatar in strip */}
+                <img src={personal.profileImage} alt="Firoj" className="profile-img" loading="lazy"/>
+                <div>
+                  <div className="profile-name">{personal.name}</div>
+                  <div className="profile-loc">📍 {personal.location}</div>
+                </div>
+                <span className="profile-badge">● available</span>
+              </div>
+            </div>        
+
+          </div>
+
+          {/* Stats row below photo */}
+          <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginTop:14,width:'100%',maxWidth:400}}>
+            {[
+              {n:'1+',l:'Years Exp'},
+              {n:'6',l:'Projects'},
+              {n:'6',l:'Certs'},
+            ].map((s,i)=>(
+              <div key={i} style={{
+                background:'var(--surface)',border:'1px solid var(--border2)',
+                borderRadius:10,padding:'14px 16px',textAlign:'center',
+              }}>
+                <div style={{fontFamily:'var(--mono)',fontSize:'1.4rem',fontWeight:700,color:'var(--cyan)'}}>{s.n}</div>
+                <div style={{fontFamily:'var(--mono)',fontSize:'0.62rem',color:'var(--text3)',textTransform:'uppercase',letterSpacing:'0.5px',marginTop:2}}>{s.l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+// ── FOOTER ──
+const Footer = ({personal}) => (
+  <footer className="footer">
+    <div className="footer-inner">
+      <div className="footer-top">
+        <div className="footer-brand">
+          <div className="footer-logo">[firoj.ahmed]<span style={{color:'var(--text3)',fontWeight:300}}>_</span></div>
+          <p className="footer-bio">Full Stack Developer building enterprise-grade systems with .NET, C# and modern web technologies. Based in {personal.location}.</p>
+          <div className="footer-socials" style={{marginTop:16}}>
+            {[
+              {href:personal.socials.github,icon:<Icons.Github/>},
+              {href:personal.socials.linkedin,icon:<Icons.Linkedin/>},
+              {href:personal.socials.twitter,icon:<Icons.Twitter/>},
+            ].map((s,i)=>(
+              <a key={i} href={s.href} className="f-soc" target="_blank" rel="noopener">{s.icon}</a>
+            ))}
+          </div>
+        </div>
+        <div className="footer-nav">
+          {['home','about','projects','experience','certificates','contact'].map(l=>(
+            <a key={l} href={`#${l}`} className="f-nav-link">{l}</a>
+          ))}
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span className="footer-copy">
+          © {new Date().getFullYear()} <span>MD Firoj Ahmed</span> · All rights reserved
+        </span>
+        <div className="tech-stack-tag">
+          built with <span>React</span> + <span>Vanilla CSS</span> · data from <span>portfolio.json</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+// ── Back To Top ──
+const BackToTop = () => {
+  const [show, setShow] = React.useState(false);
+  React.useEffect(()=>{
+    const h = ()=>setShow(window.scrollY>500);
+    window.addEventListener('scroll',h);
+    return ()=>window.removeEventListener('scroll',h);
+  },[]);
+  return (
+    <button className={`btt${show?' show':''}`}
+      onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}
+      aria-label="Back to top">
+      <Icons.Up/>
+    </button>
+  );
+};
+
+// ── APP ──
+const App = ({data}) => {
+  // Scroll animations
+  React.useEffect(()=>{
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on') });
+    },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+    return ()=>obs.disconnect();
+  },[]);
+
+  // Hamburger
+  React.useEffect(()=>{
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    if(!btn||!menu) return;
+    const toggle = ()=>menu.classList.toggle('open');
+    const close = e=>{ if(!menu.contains(e.target)&&e.target!==btn) menu.classList.remove('open') };
+    btn.addEventListener('click',toggle);
+    document.addEventListener('click',close);
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+    return ()=>{ btn.removeEventListener('click',toggle); document.removeEventListener('click',close) };
+  },[]);
+
+  return (
+    <>
+      <Hero personal={data.personal} projects={data.projects} certificates={data.certificates}/>
+      <Footer personal={data.personal}/>
+      <BackToTop/>
+      <style>{`@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}`}</style>
+    </>
+  );
+};
+
+async function loadData() {
+  try {
+    const response = await fetch('portfolio.json');
+    const data = await response.json();
+    console.log(data);
+    return data; 
+    } catch (error) {
+      console.error('Error loading JSON:', error);
+    }
+  }
+(async () => {
+  const data = await loadData();
+
+  ReactDOM.render(
+    <App data={data} />,
+    document.getElementById('root')
+  );
+})();
+</script>
+</body>
+</html>
