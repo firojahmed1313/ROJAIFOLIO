@@ -103,12 +103,12 @@ const Footer = ({personal}) => (
       <div className="footer-top">
         <div className="footer-brand">
           <div className="footer-logo">[firoj.ahmed]<span style={{color:'var(--text3)',fontWeight:300}}>_</span></div>
-          <p className="footer-bio">Full Stack Developer building enterprise-grade systems with .NET, C# and modern web technologies. Based in {personal?.location}.</p>
+          <p className="footer-bio">{personal.title} {personal.tagline} Based in {personal.location}.</p>
           <div className="footer-socials" style={{marginTop:16}}>
             {[
-              {href:personal?.socials.github,icon:<Icons.Github/>},
-              {href:personal?.socials.linkedin,icon:<Icons.Linkedin/>},
-              {href:personal?.socials.twitter,icon:<Icons.Twitter/>},
+              {href:personal.socials.github,icon:<Icons.Github/>},
+              {href:personal.socials.linkedin,icon:<Icons.Linkedin/>},
+              {href:personal.socials.twitter,icon:<Icons.Twitter/>},
             ].map((s,i)=>(
               <a key={i} href={s.href} className="f-soc" target="_blank" rel="noopener">{s.icon}</a>
             ))}
@@ -122,7 +122,7 @@ const Footer = ({personal}) => (
       </div>
       <div className="footer-bottom">
         <span className="footer-copy">
-          © {new Date().getFullYear()} <span>MD Firoj Ahmed</span> · All rights reserved
+          © {new Date().getFullYear()} <span>{personal.name}</span> · All rights reserved
         </span>
         <div className="tech-stack-tag">
           built with <span>React</span> + <span>Vanilla CSS</span> · data from <span>portfolio.json</span>

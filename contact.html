@@ -91,24 +91,18 @@ const Contact = ({personal}) => {
             </div>
 
             {/* QR */}
-            <div style={{marginTop:28,background:'var(--surface)',border:'1px solid var(--border2)',borderRadius:12,padding:'20px',textAlign:'center'}}>
+            <div className="contact-qr" style={{marginTop:28,background:'var(--surface)',border:'1px solid var(--border2)',borderRadius:12,padding:'20px',textAlign:'center',width:"100%"}}>
               <div style={{marginBottom:10}}>
-                <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
-                  <rect x="8" y="8" width="32" height="32" rx="3" stroke="var(--cyan)" strokeWidth="5"/>
-                  <rect x="16" y="16" width="16" height="16" fill="var(--cyan)"/>
-                  <rect x="60" y="8" width="32" height="32" rx="3" stroke="var(--cyan)" strokeWidth="5"/>
-                  <rect x="68" y="16" width="16" height="16" fill="var(--cyan)"/>
-                  <rect x="8" y="60" width="32" height="32" rx="3" stroke="var(--cyan)" strokeWidth="5"/>
-                  <rect x="16" y="68" width="16" height="16" fill="var(--cyan)"/>
-                  <rect x="60" y="60" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="72" y="60" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="84" y="60" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="60" y="72" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="84" y="72" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="60" y="84" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="72" y="84" width="8" height="8" fill="var(--cyan)"/>
-                  <rect x="84" y="84" width="8" height="8" fill="var(--cyan)"/>
-                </svg>
+                <img
+                src={personal.qrImage}
+                alt="Send me a mail"
+                loading="lazy"
+                style={{
+                  width:'100%',height:'70%',
+                  objectFit:'cover',objectPosition:'top center',
+                  display:'block',
+                }}
+              />
               </div>
               <div style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--text3)'}}>scan → connect</div>
             </div>
@@ -124,7 +118,7 @@ const Contact = ({personal}) => {
               <label className="f-label">email</label>
               <input className="f-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={onChange} required/>
               <label className="f-label">message</label>
-              <textarea className="f-input f-ta" name="message" placeholder="What would you like to discuss?" value={form.message} onChange={onChange} required/>
+              <textarea rows="19" className="f-input f-ta" name="message" placeholder="What would you like to discuss?" value={form.message} onChange={onChange} required/>
               <button type="submit" className="f-submit" disabled={loading}>
                 {loading
                   ? <span style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8}}>
@@ -153,7 +147,7 @@ const Footer = ({personal}) => (
       <div className="footer-top">
         <div className="footer-brand">
           <div className="footer-logo">[firoj.ahmed]<span style={{color:'var(--text3)',fontWeight:300}}>_</span></div>
-          <p className="footer-bio">Full Stack Developer building enterprise-grade systems with .NET, C# and modern web technologies. Based in {personal.location}.</p>
+          <p className="footer-bio">{personal.title} {personal.tagline} Based in {personal.location}.</p>
           <div className="footer-socials" style={{marginTop:16}}>
             {[
               {href:personal.socials.github,icon:<Icons.Github/>},
@@ -172,7 +166,7 @@ const Footer = ({personal}) => (
       </div>
       <div className="footer-bottom">
         <span className="footer-copy">
-          © {new Date().getFullYear()} <span>MD Firoj Ahmed</span> · All rights reserved
+          © {new Date().getFullYear()} <span>{personal.name}</span> · All rights reserved
         </span>
         <div className="tech-stack-tag">
           built with <span>React</span> + <span>Vanilla CSS</span> · data from <span>portfolio.json</span>

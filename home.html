@@ -109,7 +109,7 @@ const Hero = ({personal, projects, certificates}) => {
 
       <div className="hero-inner">
         {/* LEFT */}
-        <div>
+        <div className="hero-left">
           <div className="terminal-chip">
             status --available-for-hire<span className="typed-cursor">|</span>
           </div>
@@ -119,18 +119,18 @@ const Hero = ({personal, projects, certificates}) => {
             <span style={{color:'var(--text3)'}}>{'>'}</span>
             {personal.title}
             <span className="sep">/</span>
-            <span style={{color:'var(--purple)'}}>1+ yr exp</span>
+            <span style={{color:'var(--purple)'}}>{personal.experience}</span> <span style={{color:'var(--text3)'}}>{'>'}</span>
           </div>
           <p className="hero-tag">
             {personal.tagline} Building with{' '}
-            <code>.NET</code>, <code>C#</code> & <code>React</code>.
+            <code>{personal.top3skills[0]}</code>, <code>{personal.top3skills[1]}</code> & <code>{personal.top3skills[2]}</code>.
           </p>
 
           <div className="cta-row">
             <a href="./contact.html" className="btn btn-cyan">
               <Icons.Mail/> Let's Talk
             </a>
-            <a href="#projects" className="btn btn-ghost">
+            <a href="./projects.html" className="btn btn-ghost">
               <span style={{fontFamily:'var(--mono)'}}>{'<'}</span>View Work<span style={{fontFamily:'var(--mono)'}}>{'>'}</span>
             </a>
             <a href={personal.resumeUrl} className="btn btn-ghost" target="_blank" rel="noopener">
@@ -164,7 +164,7 @@ const Hero = ({personal, projects, certificates}) => {
               </div>
               <p className="about-preview-text about-preview-bio">{personal.shortBio}</p>
               <div className="skill-chips">
-                {["ASP.NET Core","C#","React","SQL Server","TypeScript","Docker"].map((s,i)=>(
+                {personal.top3skills.map((s,i)=>(
                   <span key={i} className="skill-chip">{s}</span>
                 ))}
               </div>
@@ -213,7 +213,7 @@ const Hero = ({personal, projects, certificates}) => {
         </div>
 
         {/* RIGHT: developer.cs card + profile photo floating over it */}
-        <div style={{position:'relative',display:'flex',flexDirection:'column',alignItems:'center'}}>
+        <div className="hero-right" style={{position:'relative',display:'flex',flexDirection:'column',alignItems:'center'}}>
 
           {/* Wrapper with extra top padding so photo can overlap above */}
           <div style={{position:'relative',width:'100%'}}>
@@ -265,8 +265,8 @@ const Hero = ({personal, projects, certificates}) => {
                 {[
                   <><span className="ln">1</span><span className="kw">public class</span> <span className="cn">Developer</span></>,
                   <><span className="ln">2</span>{'{'}</>,
-                  <><span className="ln">3</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_name</span> = <span className="str">"MD Firoj Ahmed"</span>;</>,
-                  <><span className="ln">4</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str">"Full Stack Dev"</span>;</>,
+                  <><span className="ln">3</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_name</span> = <span className="str">{personal.name}</span>;</>,
+                  <><span className="ln">4</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str">{personal.title}</span>;</>,
                   <><span className="ln">5</span></>,
                   <><span className="ln">6</span>&nbsp;&nbsp;<span className="cm">// Core expertise</span></>,
                   <><span className="ln">7</span>&nbsp;&nbsp;<span className="fn">List</span>{'<string>'} <span className="prop">Skills</span> = <span className="kw">new</span>{'()'} {'{'}</>,
@@ -274,10 +274,10 @@ const Hero = ({personal, projects, certificates}) => {
                   <><span className="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;<span className="str">"SQL Server"</span>, <span className="str">"Docker"</span></>,
                   <><span className="ln">10</span>&nbsp;&nbsp;{'};'}</>,
                   <><span className="ln">11</span></>,
-                  <><span className="ln">12</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">ExperienceYears</span> = <span className="num">1</span>;</>,
+                  <><span className="ln">12</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">ExperienceYears</span> = <span className="num">{personal.experience.split("+")[0]}</span>;</>,
                   <><span className="ln">13</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">bool</span> <span className="prop">IsAvailable</span> = <span className="cn">true</span>;</>,
-                  <><span className="ln">14</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Projects</span> = <span className="num">6</span>;</>,
-                  <><span className="ln">15</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Certs</span> = <span className="num">6</span>;</>,
+                  <><span className="ln">14</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Projects</span> = <span className="num">{projects.length}</span>;</>,
+                  <><span className="ln">15</span>&nbsp;&nbsp;<span className="kw">public</span> <span className="fn">int</span> <span className="prop">Certs</span> = <span className="num">{certificates.length}</span>;</>,
                   <><span className="ln">16</span>{'}'}</>,
                 ].map((line,i)=>(
                   <div key={i} style={{display:'block',whiteSpace:'pre'}}>{line}</div>
@@ -324,7 +324,7 @@ const Footer = ({personal}) => (
       <div className="footer-top">
         <div className="footer-brand">
           <div className="footer-logo">[firoj.ahmed]<span style={{color:'var(--text3)',fontWeight:300}}>_</span></div>
-          <p className="footer-bio">Full Stack Developer building enterprise-grade systems with .NET, C# and modern web technologies. Based in {personal.location}.</p>
+          <p className="footer-bio">{personal.title} {personal.tagline} Based in {personal.location}.</p>
           <div className="footer-socials" style={{marginTop:16}}>
             {[
               {href:personal.socials.github,icon:<Icons.Github/>},
@@ -343,7 +343,7 @@ const Footer = ({personal}) => (
       </div>
       <div className="footer-bottom">
         <span className="footer-copy">
-          © {new Date().getFullYear()} <span>MD Firoj Ahmed</span> · All rights reserved
+          © {new Date().getFullYear()} <span>{personal.name}</span> · All rights reserved
         </span>
         <div className="tech-stack-tag">
           built with <span>React</span> + <span>Vanilla CSS</span> · data from <span>portfolio.json</span>

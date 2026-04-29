@@ -3,28 +3,31 @@
     "name": "MD Firoj Ahmed",
     "title": "Full Stack Developer",
     "tagline": "Building enterprise-grade systems with .NET, C# & modern web tech.",
+    "experience": "1+ yr exp",
     "shortBio": "1+ year professional experience at MNC. CSE graduate passionate about clean architecture, scalable APIs, and pixel-perfect UIs.",
-    "email": "firoj.ahmed@example.com",
-    "phone": "+880 1700-000000",
-    "location": "Dhaka, Bangladesh",
+    "top3skills": ["C#", ".NET Core", "React"],
+    "email": "ahmed.mohammadfiroj@gmail.com",
+    "phone": "9830340650",
+    "location": "New Town, kolkata, West Bengal, India",
     "profileImage": "./45947.png",
     "resumeUrl": "#",
+    "qrImage": "./qrremove.png",
     "socials": {
       "github": "https://github.com",
-      "linkedin": "https://linkedin.com",
+      "linkedin": "www.linkedin.com/in/mdfirojahmed",
       "twitter": "https://twitter.com"
     }
   },
   "about": {
     "bio": "I'm MD Firoj Ahmed, a dedicated Full-Stack Developer with 1+ year of professional experience at an MNC, where I primarily worked with .NET and C# in enterprise-level applications. I enjoy building scalable, maintainable, and user-focused web applications. My CSE background gives me strong foundations in algorithms, system design, and software engineering principles.",
-    "interests": ["Web Development", "Open Source", "System Design", "Cloud Architecture", "UI/UX Design", "Tech Blogs"],
+    "interests": ["Web Development", "Open Source", "System Design", "Clean Architecture", "UI/UX Design", "Tech Blogs"],
     "funFact": "Refactored a legacy .NET codebase that cut API response time by 60% — with all tests still green!",
     "skills": {
       "Languages": ["C#", "JavaScript", "TypeScript", "Python", "SQL", "HTML5", "CSS3"],
-      "Frontend": ["React", "Next.js", "Tailwind CSS", "Redux", "Axios", "Bootstrap"],
+      "Frontend": ["React", "Tailwind CSS", "Redux", "Axios", "Bootstrap"],
       "Backend": [".NET Core", "ASP.NET MVC", "Entity Framework", "REST APIs", "Node.js", "Express.js"],
-      "Databases": ["SQL Server", "PostgreSQL", "MongoDB", "Redis"],
-      "Tools": ["Git", "GitHub", "Docker", "Azure DevOps", "Postman", "Visual Studio", "VS Code", "Jira"]
+      "Databases": ["SQL", "PostgreSQL", "MongoDB", "Redis"],
+      "Tools": ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Jira"]
     }
   },
   "projects": [
@@ -100,9 +103,9 @@
       "id": 1,
       "type": "experience",
       "title": "Junior Software Developer",
-      "organization": "MNC Enterprise Solutions",
-      "location": "Dhaka, Bangladesh",
-      "startDate": "Jan 2024",
+      "organization": "TCS",
+      "location": "New Town, kolkata, West Bengal, India",
+      "startDate": "Dec 2024",
       "endDate": "Present",
       "description": "Enterprise web applications with ASP.NET Core and C#. REST API development, SQL Server optimization, React frontend integration. Agile cross-functional collaboration."
     },
