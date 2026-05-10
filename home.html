@@ -39,11 +39,11 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home" class="nav-pill">~ home</a>
-  <a href="#about" class="nav-pill">about</a>
-  <a href="#projects" class="nav-pill">projects</a>
-  <a href="#experience" class="nav-pill">timeline</a>
-  <a href="#certificates" class="nav-pill">certs</a>
-  <a href="#contact" class="nav-pill">contact</a>
+  <a href="./about.html" class="nav-pill">about</a>
+  <a href="./projects.html" class="nav-pill">projects</a>
+  <a href="./timeline.html" class="nav-pill">timeline</a>
+  <a href="./certificates.html" class="nav-pill">certs</a>
+  <a href="./contact.html" class="nav-pill">contact</a>
 </div>
 
 <div id="root"></div>
@@ -160,7 +160,7 @@ const Hero = ({personal, projects, certificates}) => {
             <div className="about-preview reveal">
               <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:10}}>
                 <span style={{fontFamily:'var(--mono)',fontSize:'0.68rem',color:'var(--cyan)'}}>about.md</span>
-                <a href="#about" className="view-all-link" style={{fontSize:'0.65rem'}}>read more <Icons.Arrow/></a>
+                <a href="./about.html" className="view-all-link" style={{fontSize:'0.65rem'}}>read more <Icons.Arrow/></a>
               </div>
               <p className="about-preview-text about-preview-bio">{personal.shortBio}</p>
               <div className="skill-chips">
