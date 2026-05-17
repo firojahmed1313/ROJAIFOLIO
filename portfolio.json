@@ -5,7 +5,11 @@
     "tagline": "Building enterprise-grade systems with .NET, C# & modern web tech.",
     "experience": "1+ yr exp",
     "shortBio": "1+ year professional experience at MNC. CSE graduate passionate about clean architecture, scalable APIs, and pixel-perfect UIs.",
-    "top3skills": ["C#", ".NET Core", "React"],
+    "top3skills": [
+      "C#",
+      ".NET Core",
+      "React"
+    ],
     "email": "ahmed.mohammadfiroj@gmail.com",
     "phone": "9830340650",
     "location": "New Town, kolkata, West Bengal, India",
@@ -13,21 +17,61 @@
     "resumeUrl": "#",
     "qrImage": "./qrremove.png",
     "socials": {
-      "github": "https://github.com",
+      "github": "https://github.com/firojahmed1313",
       "linkedin": "www.linkedin.com/in/mdfirojahmed",
       "twitter": "https://twitter.com"
     }
   },
   "about": {
-    "bio": "I'm MD Firoj Ahmed, a dedicated Full-Stack Developer with 1+ year of professional experience at an MNC, where I primarily worked with .NET and C# in enterprise-level applications. I enjoy building scalable, maintainable, and user-focused web applications. My CSE background gives me strong foundations in algorithms, system design, and software engineering principles.",
-    "interests": ["Web Development", "Open Source", "System Design", "Clean Architecture", "UI/UX Design", "Tech Blogs"],
+    "bio": "Full-Stack Developer with 1+ year of professional experience in .NET, C#, ASP.NET Core, and React.js, specializing in building scalable, secure, and high-performance web applications. Strong foundation in Computer Science & Engineering with hands-on experience in enterprise-level development, REST API design, and modern frontend frameworks.Proficient in end-to-end development, from backend business logic to responsive UI design. Experienced in Agile environments, clean architecture, and performance optimization. Actively seeking Software Development Engineer (SDE) / Full-Stack / Web Developer roles.",
+    "interests": [
+      "Web Development",
+      "Open Source",
+      "System Design",
+      "Clean Architecture"
+    ],
     "funFact": "Refactored a legacy .NET codebase that cut API response time by 60% — with all tests still green!",
     "skills": {
-      "Languages": ["C#", "JavaScript", "TypeScript", "Python", "SQL", "HTML5", "CSS3"],
-      "Frontend": ["React", "Tailwind CSS", "Redux", "Axios", "Bootstrap"],
-      "Backend": [".NET Core", "ASP.NET MVC", "Entity Framework", "REST APIs", "Node.js", "Express.js"],
-      "Databases": ["SQL", "PostgreSQL", "MongoDB", "Redis"],
-      "Tools": ["Git", "GitHub", "Postman", "Visual Studio", "VS Code", "Jira"]
+      "Languages": [
+        "C#",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "HTML5",
+        "CSS3"
+      ],
+      "Frontend": [
+        "React",
+        "Tailwind CSS",
+        "Redux",
+        "Axios",
+        "Bootstrap"
+      ],
+      "Backend": [
+        ".NET Core",
+        "ASP.NET MVC",
+        "Entity Framework",
+        "REST APIs"
+      ],
+      "Databases": [
+        "MySQL",
+        "PL/SQL",
+        "Redis"
+      ],
+      "Concepts": [
+        "SOLID Principles",
+        "Agile/Scrum",
+        "Debugging",
+        "CQRS"
+      ],
+      "Tools": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "Visual Studio",
+        "VS Code",
+        "Jira"
+      ]
     }
   },
   "projects": [
@@ -37,7 +81,14 @@
       "title": "Enterprise Task Management System",
       "description": "Full-featured project management platform for enterprise teams. Role-based access, real-time notifications via SignalR, Kanban boards, and reporting dashboards.",
       "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-      "tech": ["ASP.NET Core", "C#", "React", "SQL Server", "SignalR", "Azure"],
+      "tech": [
+        "ASP.NET Core",
+        "C#",
+        "React",
+        "SQL Server",
+        "SignalR",
+        "Azure"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": true
@@ -48,7 +99,14 @@
       "title": "E-Commerce Platform API",
       "description": "Robust RESTful API backend supporting multi-vendor architecture with JWT auth, Stripe payment integration, inventory management, and order tracking.",
       "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-      "tech": [".NET 7", "Entity Framework", "SQL Server", "Stripe API", "Redis", "Docker"],
+      "tech": [
+        ".NET 7",
+        "Entity Framework",
+        "SQL Server",
+        "Stripe API",
+        "Redis",
+        "Docker"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": true
@@ -59,7 +117,13 @@
       "title": "Healthcare Appointment Portal",
       "description": "Secure portal for scheduling healthcare appointments. Patients book, reschedule, cancel. Doctors view schedules and patient history with encrypted data handling.",
       "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-      "tech": ["Next.js", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "ASP.NET Core",
+        "PostgreSQL",
+        "Tailwind CSS"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": true
@@ -70,7 +134,12 @@
       "title": "CLI Portfolio Generator",
       "description": "Node.js command-line tool that scaffolds a developer portfolio from a config JSON, generating a static HTML site with one command.",
       "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80",
-      "tech": ["Node.js", "JavaScript", "CLI", "Handlebars"],
+      "tech": [
+        "Node.js",
+        "JavaScript",
+        "CLI",
+        "Handlebars"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": false
@@ -81,7 +150,12 @@
       "title": "Real-time Weather Dashboard",
       "description": "Responsive dashboard fetching live data from OpenWeatherMap API with forecasts, humidity, wind speed, and UV index chart visualizations.",
       "image": "https://images.unsplash.com/photo-1504608524841-42584120d693?w=800&q=80",
-      "tech": ["React", "Chart.js", "OpenWeatherMap API", "Tailwind CSS"],
+      "tech": [
+        "React",
+        "Chart.js",
+        "OpenWeatherMap API",
+        "Tailwind CSS"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": false
@@ -92,7 +166,13 @@
       "title": "Markdown Blog Engine",
       "description": "Lightweight static blog that parses Markdown files with search, categories, and RSS feed. Renders as a fully navigable blog site.",
       "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
-      "tech": ["Next.js", "TypeScript", "gray-matter", "remark", "Tailwind CSS"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "gray-matter",
+        "remark",
+        "Tailwind CSS"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": false
@@ -102,42 +182,42 @@
     {
       "id": 1,
       "type": "experience",
-      "title": "Junior Software Developer",
+      "title": "System Engineer",
       "organization": "TCS",
       "location": "New Town, kolkata, West Bengal, India",
       "startDate": "Dec 2024",
       "endDate": "Present",
-      "description": "Enterprise web applications with ASP.NET Core and C#. REST API development, SQL Server optimization, React frontend integration. Agile cross-functional collaboration."
+      "description": "• Engineered and optimized scalable backend services using C#, .NET, and ASP.NET Core, significantly reducing application response time and improving system throughput under load\n• Designed and deployed RESTful APIs with efficient routing, validation, and error handling, enhancing API performance and enabling seamless integration across multiple services\n• Implemented complex business logic and optimized database interactions (SQL), reducing data processing time and improving query efficiency\n• Developed and maintained batch processing systems (time-based and file-based) for automated data workflows, ensuring reliable execution, efficient large-scale data handling, and fault-tolerant processing\n• Diagnosed and resolved critical production issues, leveraging advanced debugging and logging strategies to minimize system downtime and production incidents\n• Refactored legacy codebase using SOLID principles and clean architecture patterns, improving code maintainability, scalability, and overall system design\n• Collaborated with cross-functional teams in Agile environments, translating business requirements into technical solutions and accelerating feature delivery timelines"
+    },
+    {
+      "id": 4,
+      "type": "experience",
+      "title": "Summer Intern",
+      "organization": "Celebal Technologies Jaipur, Rajasthan 302017",
+      "location": "Jaipur, Rajasthan 302017",
+      "startDate": "June 2023",
+      "endDate": "August 2023",
+      "description": "•\tThe main objective of the project was to develop a front-end website tailored to the film enthusiast community.\n•\tEnhanced visitor engagement through intuitive design, encouraging exploration of films.\n•\tUtilized React.js, HTML, CSS, Bootstrap, and Redux Saga for data processing.\n•\tImplemented Redux to optimize data flow and application state.\n•\tCreated responsive designs for a cross-device, user-friendly experience."
     },
     {
       "id": 2,
       "type": "training",
-      "title": "Full Stack .NET Developer Bootcamp",
-      "organization": "BITM — BASIS Institute",
-      "location": "Dhaka, Bangladesh",
-      "startDate": "Jul 2023",
-      "endDate": "Dec 2023",
-      "description": "6-month intensive on ASP.NET Core, Entity Framework, SQL Server, and React. Real-world projects with senior industry mentorship."
+      "title": "Industrial Training And Internship",
+      "organization": "Ardent Computech Pvt Ltd Online",
+      "location": "Remote",
+      "startDate": "Aug 2022",
+      "endDate": "Sep 2022",
+      "description": "Developed a hotel website project from zero to deployment. Utilized responsive design to ensure compatibility across all devices Tools: Html, Css , JavaScript and Bootstrap. Coordinated with a team of students to design and deployment."
     },
     {
       "id": 3,
       "type": "education",
-      "title": "B.Sc. Computer Science & Engineering",
-      "organization": "University of Dhaka",
-      "location": "Dhaka, Bangladesh",
-      "startDate": "2019",
-      "endDate": "2023",
+      "title": "B.Tech in Computer Science And Engineeing",
+      "organization": "Kalyani Government Engineering College",
+      "location": "Kalyani, Nadia, West Bengal, India",
+      "startDate": "2020",
+      "endDate": "2024",
       "description": "Algorithms, data structures, software engineering, database management, computer networks. Programming contests and open-source contributions."
-    },
-    {
-      "id": 4,
-      "type": "education",
-      "title": "Higher Secondary Certificate (HSC)",
-      "organization": "Dhaka College",
-      "location": "Dhaka, Bangladesh",
-      "startDate": "2017",
-      "endDate": "2019",
-      "description": "Science group, GPA 5.00. Mathematics, Physics, and Information & Communication Technology."
     }
   ],
   "certificates": [
