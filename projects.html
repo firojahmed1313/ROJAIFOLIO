@@ -80,15 +80,23 @@
     // ── PROJECTS Section ──
     const Projects = ({ projects }) => {
       const [filter, setFilter] = React.useState('all');
-      const shown = filter === 'all' ? projects : projects.filter(p => p.type === filter);
+      const shown = React.useMemo(() => {
+        if (filter === 'all') return projects;
+        return projects.filter(
+          p =>
+            p.type?.trim().toLowerCase() ===
+            filter.trim().toLowerCase()
+        );
+      }, [projects, filter]);
+      console.log(filter);
       return (
         <section className="page-section projects-bg" id="projects">
           <div className="inner">
             <SectionHeader tag="projects[]" title="My " hi="Work." sub="From enterprise systems to side experiments — all built with purpose." />
             <div className="filter-row">
               {['all', 'complete', 'small'].map(f => (
-                <button key={f} className={`f-tab${filter === f ? ' active' : ''}`} onClick={() => setFilter(f)}>
-                  {f === 'all' ? 'all_projects' : f === 'complete' ? 'complete_builds' : 'mini_projects'}
+                <button key={f} className={`f-tab${filter == f ? ' active' : ''}`} onClick={() => setFilter(f)}>
+                  {f}
                 </button>
               ))}
             </div>
@@ -100,30 +108,32 @@
       );
     };
     // ── Reusable: ProjectCard ──
-    const ProjectCard = ({ project, idx }) => (
-      <div className="proj-card reveal" style={{ transitionDelay: `${idx * 0.08}s` }}>
-        <div className="proj-img-wrap">
-          <img src={project.image} alt={project.title} className="proj-img" loading="lazy" />
-          <div className="proj-overlay" />
-          <span className="proj-num">_{String(project.id).padStart(2, '0')}</span>
-        </div>
-        <div className="proj-body">
-          <h3 className="proj-title">{project.title}</h3>
-          <p className="proj-desc">{project.description}</p>
-          <div className="proj-tech">
-            {project.tech.map((t, i) => <span key={i} className="t-tag">{t}</span>)}
+    const ProjectCard = ({ project, idx }) => {
+      return (
+        <div className="proj-card reveal" style={{ transitionDelay: `${idx * 0.08}s` }}>
+          <div className="proj-img-wrap">
+            <img src={project.image} alt={project.title} className="proj-img" loading="lazy" />
+            <div className="proj-overlay" />
+            <span className="proj-num">_{String(project.id).padStart(2, '0')}</span>
           </div>
-          <div className="proj-actions">
-            <a href={project.liveUrl} className="btn-live" target="_blank" rel="noopener">
-              <Icons.External /> Live
-            </a>
-            <a href={project.githubUrl} className="btn-code" target="_blank" rel="noopener">
-              <Icons.Github /> Code
-            </a>
+          <div className="proj-body">
+            <h3 className="proj-title">{project.title}</h3>
+            <p className="proj-desc">{project.description}</p>
+            <div className="proj-tech">
+              {project.tech.map((t, i) => <span key={i} className="t-tag">{t}</span>)}
+            </div>
+            <div className="proj-actions">
+              <a href={project.liveUrl} className="btn-live" target="_blank" rel="noopener">
+                <Icons.External /> Live
+              </a>
+              <a href={project.githubUrl} className="btn-code" target="_blank" rel="noopener">
+                <Icons.Github /> Code
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      )
+    };
 
     // ── FOOTER ──
     const Footer = ({ personal }) => (

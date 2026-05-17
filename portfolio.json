@@ -78,104 +78,86 @@
     {
       "id": 1,
       "type": "complete",
-      "title": "Enterprise Task Management System",
-      "description": "Full-featured project management platform for enterprise teams. Role-based access, real-time notifications via SignalR, Kanban boards, and reporting dashboards.",
-      "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+      "title": "ROJLEARN: Online Learning Management and Tracking System (LMS)",
+      "description": "• Engineered and delivered a scalable learning platform supporting course management, exams, assignments, and progress tracking with smooth handling of multiple users\n      • Designed and implemented robust APIs with advanced filtering, sorting, and pagination, enabling efficient course search and data retrieval\n      • Built and integrated personalized course recommendation functionality based on user activity and course content, improving course discovery\n      • Optimized data handling with structured query design and reduced redundant database calls, ensuring faster and consistent performance\n      • Identified and resolved critical runtime issues using systematic debugging and logging mechanisms, improving application reliability and stability",
+      "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVhcm58ZW58MHx8MHx8fDA%3D?w=800&q=80",
       "tech": [
-        "ASP.NET Core",
-        "C#",
+        "Java",
+        "Spring Boot",
         "React",
-        "SQL Server",
-        "SignalR",
-        "Azure"
+        "MongoDb",
+        "Spring Data JPA"
       ],
-      "liveUrl": "#",
-      "githubUrl": "#",
+      "liveUrl": "https://rojlearn.vercel.app",
+      "githubUrl": "https://github.com/firojahmed1313/ROJLEARNN",
       "featured": true
     },
     {
       "id": 2,
       "type": "complete",
-      "title": "E-Commerce Platform API",
-      "description": "Robust RESTful API backend supporting multi-vendor architecture with JWT auth, Stripe payment integration, inventory management, and order tracking.",
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "title": "ROJBLOG: A Full-Stack Blog Website",
+      "description": "• Architected a full-stack blog platform allowing users to create, read, update, and delete blog posts with robust database integration.\n• Designed a user-friendly interface using React, HTML, and CSS to provide an engaging and responsive experience.\n• Built the back-end with Node.js and Express.js, optimizing server-side processing and API management.\n• Integrated MongoDB for efficient data storage, retrieval, and management, ensuring scalability and reliability.\n• Implemented pagination and search functionalities to enhance user navigation and content discovery",
+      "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QmxvZ3xlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
-        ".NET 7",
-        "Entity Framework",
-        "SQL Server",
-        "Stripe API",
-        "Redis",
-        "Docker"
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDb",
+        "RESTful API"
       ],
-      "liveUrl": "#",
-      "githubUrl": "#",
+      "liveUrl": "https://rojblog-firojahmed.vercel.app/",
+      "githubUrl": "https://github.com/firojahmed1313/ROJBLOGFB",
       "featured": true
     },
     {
       "id": 3,
       "type": "complete",
-      "title": "Healthcare Appointment Portal",
-      "description": "Secure portal for scheduling healthcare appointments. Patients book, reschedule, cancel. Doctors view schedules and patient history with encrypted data handling.",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+      "title": "Smart Pool: A Ride Sharing Platform Based on Blockchain",
+      "description": "A decentralized ride-sharing platform built on blockchain technology, offering secure and transparent peer-to-peer transportation services.\n• Integrated smart contracts to automate fare calculations, payment processing, and reputation management, ensuring trust and transparency among users.\n• Designed a user-friendly interface with intuitive navigation and real-time updates for seamless ride booking and management.\n• Implemented secure authentication and authorization mechanisms to protect user data and ensure secure transactions.",
+      "image": "https://images.unsplash.com/photo-1566795474976-27496cf3b6e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FycG9vbHxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
-        "Next.js",
-        "TypeScript",
-        "ASP.NET Core",
-        "PostgreSQL",
-        "Tailwind CSS"
+        "Solidity",
+        "Node.js",
+        "Ethereum",
+        "web3.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Hardhat",
+        "Ethers.js"
+      ],
+      "liveUrl": "https://smartpool-mdfirojahmed.vercel.app",
+      "githubUrl": "https://github.com/firojahmed1313/College-project",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "type": "small",
+      "title": "RojBill: Console-Based Customer & Billing System",
+      "description": "• Developed a console-based customer management system in Python with database integration using SQLite.\n• Implemented customer registration, billing, complaint management, and consumer handling with CRUD operations.\n• Designed and managed relational database tables for customer, bill details, complaints, and consumer records.\n• Developed admin functionalities, including adding, updating, deleting, and searching customer and consumer data.\n• Ensured data integrity and security by implementing validation checks and marking deleted records as \"Inactive\" instead of permanent deletion.",
+      "image": "https://images.unsplash.com/photo-1634733988138-bf2c3a2a13fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmlsbGluZyUyMFN5c3RlbXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
+      "tech": [
+        "Python",
+        "Sqlite3",
+        "CLI"
       ],
       "liveUrl": "#",
       "githubUrl": "#",
       "featured": true
     },
     {
-      "id": 4,
-      "type": "small",
-      "title": "CLI Portfolio Generator",
-      "description": "Node.js command-line tool that scaffolds a developer portfolio from a config JSON, generating a static HTML site with one command.",
-      "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80",
-      "tech": [
-        "Node.js",
-        "JavaScript",
-        "CLI",
-        "Handlebars"
-      ],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "featured": false
-    },
-    {
       "id": 5,
       "type": "small",
-      "title": "Real-time Weather Dashboard",
-      "description": "Responsive dashboard fetching live data from OpenWeatherMap API with forecasts, humidity, wind speed, and UV index chart visualizations.",
-      "image": "https://images.unsplash.com/photo-1504608524841-42584120d693?w=800&q=80",
+      "title": "ParcelEase: Courier Management System",
+      "description": "• Developed a console-based parcel booking and tracking system in Python with SQLite database integration for efficient delivery management.\n• Implemented user authentication and role-based access control for customers, delivery officers, and administrators.\n• Designed and managed relational database tables for user profiles, parcel bookings, tracking details, and payment records.\n• Implemented CRUD operations for parcel booking, delivery status updates, tracking history, and scheduling pickup/drop-off times.\n• Developed invoice generation functionality displaying booking details, service costs, and payment status.\n• Ensured data validation and integrity by enforcing constraints on phone numbers, parcel weights, and pickup/drop-off timestamps.\n• Optimized SQL queries for retrieving user booking history and tracking details within a given date range.\n• Implemented exception handling and error messages to prevent database corruption and improve user experience.",
+      "image": "https://images.unsplash.com/photo-1449247666642-264389f5f5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhY2thZ2UlMjBkZWxpdmVyeXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
-        "React",
-        "Chart.js",
-        "OpenWeatherMap API",
-        "Tailwind CSS"
+        "Python",
+        "Sqlite3",
+        "CLI"
       ],
       "liveUrl": "#",
       "githubUrl": "#",
-      "featured": false
-    },
-    {
-      "id": 6,
-      "type": "small",
-      "title": "Markdown Blog Engine",
-      "description": "Lightweight static blog that parses Markdown files with search, categories, and RSS feed. Renders as a fully navigable blog site.",
-      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
-      "tech": [
-        "Next.js",
-        "TypeScript",
-        "gray-matter",
-        "remark",
-        "Tailwind CSS"
-      ],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "featured": false
+      "featured": true
     }
   ],
   "experience": [
@@ -223,56 +205,56 @@
   "certificates": [
     {
       "id": 1,
-      "title": "Microsoft Azure Fundamentals",
-      "issuer": "Microsoft",
-      "date": "March 2024",
-      "credentialUrl": "#",
-      "badge": "AZ-900",
+      "title": "Databricks Certified Associate Developer for Apache Spark",
+      "issuer": "Databricks",
+      "date": "May 2026",
+      "credentialUrl": "https://credentials.databricks.com/085c6315-6ac1-4180-bdd9-562d4dbf243c#acc.bLzemfT9",
+      "badge": "Apache Spark",
       "color": "#0078D4"
     },
     {
       "id": 2,
-      "title": "ASP.NET Core Developer",
-      "issuer": "LinkedIn Learning",
-      "date": "November 2023",
-      "credentialUrl": "#",
-      "badge": "Backend",
+      "title": "Databricks Certified Data Engineer Associate",
+      "issuer": "Databricks",
+      "date": "March 2026",
+      "credentialUrl": "https://credentials.databricks.com/35cc9b29-eb82-491f-b4f6-29d5c8abf929#acc.vOtY3iRm",
+      "badge": "Databricks",
       "color": "#0A66C2"
     },
     {
       "id": 3,
-      "title": "React — The Complete Guide",
-      "issuer": "Udemy",
-      "date": "September 2023",
-      "credentialUrl": "#",
-      "badge": "Frontend",
+      "title": "Databricks Fundamentals",
+      "issuer": "Databricks",
+      "date": "February 2026",
+      "credentialUrl": "https://credentials.databricks.com/293e6019-eb75-4c96-8e6c-80fcf93fb16d#acc.3j9glJoa",
+      "badge": "Databricks",
       "color": "#A435F0"
     },
     {
       "id": 4,
-      "title": "SQL Server Performance Tuning",
-      "issuer": "Pluralsight",
-      "date": "June 2024",
-      "credentialUrl": "#",
-      "badge": "Database",
+      "title": "Generative AI Fundamentals",
+      "issuer": "Databricks",
+      "date": "April 2026",
+      "credentialUrl": "https://credentials.databricks.com/8b9c1363-8e3b-4898-bfab-9eedaf893cc6#acc.rsXCL42v",
+      "badge": "Generative AI",
       "color": "#F15B2A"
     },
     {
       "id": 5,
-      "title": "Docker for Developers",
-      "issuer": "freeCodeCamp",
-      "date": "August 2023",
-      "credentialUrl": "#",
-      "badge": "DevOps",
+      "title": "Data Ingestion with Lakeflow Connect",
+      "issuer": "Databricks",
+      "date": "March 2026",
+      "credentialUrl": "https://credentials.databricks.com/de412636-a241-4e39-a09c-6d6647622d3b#acc.7AlWXYJM",
+      "badge": "Data Ingestion",
       "color": "#2496ED"
     },
     {
       "id": 6,
-      "title": "JS Algorithms & Data Structures",
-      "issuer": "freeCodeCamp",
-      "date": "May 2023",
-      "credentialUrl": "#",
-      "badge": "CS",
+      "title": "Deploy Workloads with Lakeflow Jobs",
+      "issuer": "Databricks",
+      "date": "March 2026",
+      "credentialUrl": "https://credentials.databricks.com/23a4db51-681a-4f3e-84fc-cd976f6de364#acc.rcumdIwf",
+      "badge": "Data Processing",
       "color": "#0A0A23"
     }
   ]
