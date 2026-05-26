@@ -252,11 +252,9 @@
                   <div style={{
                     position: 'absolute', bottom: 8, left: '50%', transform: 'translateX(-50%)', zIndex: 4,
                     display: 'flex', alignItems: 'center', gap: 5,
-                    background: 'rgba(0,255,136,0.1)', border: '1px solid rgba(0,255,136,0.25)',
-                    borderRadius: 100, padding: '3px 9px', whiteSpace: 'nowrap',
+                    padding: '3px 9px', whiteSpace: 'nowrap',
                   }}>
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--green)', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'var(--mono)', fontSize: '0.55rem', color: 'var(--green)' }}>online</span>
+                    <span className="nav-status">online</span>
                   </div>
                 </div>
 
@@ -270,8 +268,18 @@
                     {[
                       <><span className="ln">1</span><span className="kw">public class</span> <span className="cn">Developer</span></>,
                       <><span className="ln">2</span>{'{'}</>,
-                      <><span className="ln">3</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_name</span> = <span className="str">{personal.name}</span>;</>,
-                      <><span className="ln">4</span>&nbsp;&nbsp;<span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str">{personal.title}</span>;</>,
+                      <div style={{ display: "block" }}>
+                        <span className="ln">3</span> &nbsp;
+                        <div style={{ display: "inline-block" }}>
+                          <span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str wordWarp">{personal.name}</span>
+                        </div>
+                      </div>,
+                      <div style={{ display: "block" }}>
+                        <span className="ln">4</span> &nbsp;
+                        <div style={{ display: "inline-block" }}>
+                          <span className="kw">private</span> <span className="fn">string</span> <span className="prop">_role</span> = <span className="str wordWarp">{personal.title}</span>
+                        </div>
+                      </div>,
                       <><span className="ln">5</span></>,
                       <><span className="ln">6</span>&nbsp;&nbsp;<span className="cm">// Core expertise</span></>,
                       <><span className="ln">7</span>&nbsp;&nbsp;<span className="fn">List</span>{'<string>'} <span className="prop">Skills</span> = <span className="kw">new</span>{'()'} {'{'}</>,
@@ -295,7 +303,7 @@
                       <div className="profile-name">{personal.name}</div>
                       <div className="profile-loc">📍 {personal.location}</div>
                     </div>
-                    <span className="profile-badge">● available</span>
+                    <span className="nav-status">available</span>
                   </div>
                 </div>
 
@@ -319,7 +327,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section >
       );
     };
     // ── FOOTER ──
