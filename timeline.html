@@ -69,7 +69,7 @@
             </div>
             <div className="tl-title">{item.title}</div>
             <div className="tl-org">{item.organization} <span style={{ color: 'var(--text3)', fontWeight: 400 }}>· {item.location}</span></div>
-            <p className="tl-desc">{item.description}</p>
+            <p className="tl-desc">{item.description.map((desc, i) => <span key={i}>{i + 1}. {desc} <br /></span>)}</p>
           </div>
         </div>
       );

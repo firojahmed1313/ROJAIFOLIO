@@ -126,7 +126,7 @@ address {
 }
 
 #languages {
-    column-count: 4;
+    column-count: 3;
 }
 
 a,
@@ -305,6 +305,7 @@ input:checked~div #languages label {
 #contact-mini {
     display: flex;
     margin-top: 1rem;
+    gap: 2rem;
 }
 
 #contact-mini>div {

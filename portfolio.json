@@ -79,7 +79,13 @@
       "id": 1,
       "type": "complete",
       "title": "ROJLEARN: Online Learning Management and Tracking System (LMS)",
-      "description": "• Engineered and delivered a scalable learning platform supporting course management, exams, assignments, and progress tracking with smooth handling of multiple users\n      • Designed and implemented robust APIs with advanced filtering, sorting, and pagination, enabling efficient course search and data retrieval\n      • Built and integrated personalized course recommendation functionality based on user activity and course content, improving course discovery\n      • Optimized data handling with structured query design and reduced redundant database calls, ensuring faster and consistent performance\n      • Identified and resolved critical runtime issues using systematic debugging and logging mechanisms, improving application reliability and stability",
+      "description": [
+        "Engineered and delivered a scalable learning platform supporting course management, exams, assignments, and progress tracking with smooth handling of multiple users.",
+        "Designed and implemented robust APIs with advanced filtering, sorting, and pagination, enabling efficient course search and data retrieval.",
+        "Built and integrated personalized course recommendation functionality based on user activity and course content, improving course discovery.",
+        "Optimized data handling with structured query design and reduced redundant database calls, ensuring faster and consistent performance.",
+        "Identified and resolved critical runtime issues using systematic debugging and logging mechanisms, improving application reliability and stability."
+      ],
       "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVhcm58ZW58MHx8MHx8fDA%3D?w=800&q=80",
       "tech": [
         "Java",
@@ -96,7 +102,13 @@
       "id": 2,
       "type": "complete",
       "title": "ROJBLOG: A Full-Stack Blog Website",
-      "description": "• Architected a full-stack blog platform allowing users to create, read, update, and delete blog posts with robust database integration.\n• Designed a user-friendly interface using React, HTML, and CSS to provide an engaging and responsive experience.\n• Built the back-end with Node.js and Express.js, optimizing server-side processing and API management.\n• Integrated MongoDB for efficient data storage, retrieval, and management, ensuring scalability and reliability.\n• Implemented pagination and search functionalities to enhance user navigation and content discovery",
+      "description": [
+        "Architected a full-stack blog platform allowing users to create, read, update, and delete blog posts with robust database integration.",
+        "Designed a user-friendly interface using React, HTML, and CSS to provide an engaging and responsive experience.",
+        "Built the back-end with Node.js and Express.js, optimizing server-side processing and API management.",
+        "Integrated MongoDB for efficient data storage, retrieval, and management, ensuring scalability and reliability.",
+        "Implemented pagination and search functionalities to enhance user navigation and content discovery"
+      ],
       "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QmxvZ3xlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
         "React",
@@ -113,7 +125,12 @@
       "id": 3,
       "type": "complete",
       "title": "Smart Pool: A Ride Sharing Platform Based on Blockchain",
-      "description": "A decentralized ride-sharing platform built on blockchain technology, offering secure and transparent peer-to-peer transportation services.\n• Integrated smart contracts to automate fare calculations, payment processing, and reputation management, ensuring trust and transparency among users.\n• Designed a user-friendly interface with intuitive navigation and real-time updates for seamless ride booking and management.\n• Implemented secure authentication and authorization mechanisms to protect user data and ensure secure transactions.",
+      "description": [
+        "A decentralized ride-sharing platform built on blockchain technology, offering secure and transparent peer-to-peer transportation services.",
+        "Integrated smart contracts to automate fare calculations, payment processing, and reputation management, ensuring trust and transparency among users.",
+        "Designed a user-friendly interface with intuitive navigation and real-time updates for seamless ride booking and management.",
+        "Implemented secure authentication and authorization mechanisms to protect user data and ensure secure transactions."
+      ],
       "image": "https://images.unsplash.com/photo-1566795474976-27496cf3b6e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FycG9vbHxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
         "Solidity",
@@ -133,7 +150,13 @@
       "id": 4,
       "type": "small",
       "title": "RojBill: Console-Based Customer & Billing System",
-      "description": "• Developed a console-based customer management system in Python with database integration using SQLite.\n• Implemented customer registration, billing, complaint management, and consumer handling with CRUD operations.\n• Designed and managed relational database tables for customer, bill details, complaints, and consumer records.\n• Developed admin functionalities, including adding, updating, deleting, and searching customer and consumer data.\n• Ensured data integrity and security by implementing validation checks and marking deleted records as \"Inactive\" instead of permanent deletion.",
+      "description": [
+        "Developed a console-based customer management system in Python with database integration using SQLite.",
+        "Implemented customer registration, billing, complaint management, and consumer handling with CRUD operations.",
+        "Designed and managed relational database tables for customer, bill details, complaints, and consumer records.",
+        "Developed admin functionalities, including adding, updating, deleting, and searching customer and consumer data.",
+        "Ensured data integrity and security by implementing validation checks and marking deleted records as \"Inactive\" instead of permanent deletion."
+      ],
       "image": "https://images.unsplash.com/photo-1634733988138-bf2c3a2a13fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmlsbGluZyUyMFN5c3RlbXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
         "Python",
@@ -148,7 +171,16 @@
       "id": 5,
       "type": "small",
       "title": "ParcelEase: Courier Management System",
-      "description": "• Developed a console-based parcel booking and tracking system in Python with SQLite database integration for efficient delivery management.\n• Implemented user authentication and role-based access control for customers, delivery officers, and administrators.\n• Designed and managed relational database tables for user profiles, parcel bookings, tracking details, and payment records.\n• Implemented CRUD operations for parcel booking, delivery status updates, tracking history, and scheduling pickup/drop-off times.\n• Developed invoice generation functionality displaying booking details, service costs, and payment status.\n• Ensured data validation and integrity by enforcing constraints on phone numbers, parcel weights, and pickup/drop-off timestamps.\n• Optimized SQL queries for retrieving user booking history and tracking details within a given date range.\n• Implemented exception handling and error messages to prevent database corruption and improve user experience.",
+      "description": [
+        "Developed a console-based parcel booking and tracking system in Python with SQLite database integration for efficient delivery management.",
+        "Implemented user authentication and role-based access control for customers, delivery officers, and administrators.",
+        "Designed and managed relational database tables for user profiles, parcel bookings, tracking details, and payment records.",
+        "Implemented CRUD operations for parcel booking, delivery status updates, tracking history, and scheduling pickup/drop-off times.",
+        "Developed invoice generation functionality displaying booking details, service costs, and payment status.",
+        "Ensured data validation and integrity by enforcing constraints on phone numbers, parcel weights, and pickup/drop-off timestamps.",
+        "Optimized SQL queries for retrieving user booking history and tracking details within a given date range.",
+        "Implemented exception handling and error messages to prevent database corruption and improve user experience."
+      ],
       "image": "https://images.unsplash.com/photo-1449247666642-264389f5f5b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhY2thZ2UlMjBkZWxpdmVyeXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80",
       "tech": [
         "Python",
@@ -169,7 +201,15 @@
       "location": "New Town, kolkata, West Bengal, India",
       "startDate": "Dec 2024",
       "endDate": "Present",
-      "description": "• Engineered and optimized scalable backend services using C#, .NET, and ASP.NET Core, significantly reducing application response time and improving system throughput under load\n• Designed and deployed RESTful APIs with efficient routing, validation, and error handling, enhancing API performance and enabling seamless integration across multiple services\n• Implemented complex business logic and optimized database interactions (SQL), reducing data processing time and improving query efficiency\n• Developed and maintained batch processing systems (time-based and file-based) for automated data workflows, ensuring reliable execution, efficient large-scale data handling, and fault-tolerant processing\n• Diagnosed and resolved critical production issues, leveraging advanced debugging and logging strategies to minimize system downtime and production incidents\n• Refactored legacy codebase using SOLID principles and clean architecture patterns, improving code maintainability, scalability, and overall system design\n• Collaborated with cross-functional teams in Agile environments, translating business requirements into technical solutions and accelerating feature delivery timelines"
+      "description": [
+        "Engineered and optimized scalable backend services using C#, .NET, and ASP.NET Core, significantly reducing application response time and improving system throughput under load.",
+        "Designed and deployed RESTful APIs with efficient routing, validation, and error handling, enhancing API performance and enabling seamless integration across multiple services.",
+        "Implemented complex business logic and optimized database interactions (SQL), reducing data processing time and improving query efficiency.",
+        "Developed and maintained batch processing systems (time-based and file-based) for automated data workflows, ensuring reliable execution, efficient large-scale data handling, and fault-tolerant processing.",
+        "Diagnosed and resolved critical production issues, leveraging advanced debugging and logging strategies to minimize system downtime and production incidents.",
+        "Refactored legacy codebase using SOLID principles and clean architecture patterns, improving code maintainability, scalability, and overall system design.",
+        "Collaborated with cross-functional teams in Agile environments, translating business requirements into technical solutions and accelerating feature delivery timelines."
+      ]
     },
     {
       "id": 4,
@@ -179,7 +219,13 @@
       "location": "Jaipur, Rajasthan 302017",
       "startDate": "June 2023",
       "endDate": "August 2023",
-      "description": "•\tThe main objective of the project was to develop a front-end website tailored to the film enthusiast community.\n•\tEnhanced visitor engagement through intuitive design, encouraging exploration of films.\n•\tUtilized React.js, HTML, CSS, Bootstrap, and Redux Saga for data processing.\n•\tImplemented Redux to optimize data flow and application state.\n•\tCreated responsive designs for a cross-device, user-friendly experience."
+      "description": [
+        "The main objective of the project was to develop a front-end website tailored to the film enthusiast community.",
+        "Enhanced visitor engagement through intuitive design, encouraging exploration of films.",
+        "Utilized React.js, HTML, CSS, Bootstrap, and Redux Saga for data processing.",
+        "Implemented Redux to optimize data flow and application state.",
+        "Created responsive designs for a cross-device, user-friendly experience."
+      ]
     },
     {
       "id": 2,
@@ -189,7 +235,10 @@
       "location": "Remote",
       "startDate": "Aug 2022",
       "endDate": "Sep 2022",
-      "description": "Developed a hotel website project from zero to deployment. Utilized responsive design to ensure compatibility across all devices Tools: Html, Css , JavaScript and Bootstrap. Coordinated with a team of students to design and deployment."
+      "description": [
+        "Developed a hotel website project from zero to deployment. Utilized responsive design to ensure compatibility across all devices Tools: Html, Css , JavaScript and Bootstrap.",
+        " Coordinated with a team of students to design and deployment."
+      ]
     },
     {
       "id": 3,
@@ -199,7 +248,9 @@
       "location": "Kalyani, Nadia, West Bengal, India",
       "startDate": "2020",
       "endDate": "2024",
-      "description": "Algorithms, data structures, software engineering, database management, computer networks. Programming contests and open-source contributions."
+      "description": [
+        "Algorithms, data structures, software engineering, database management, computer networks. Programming contests and open-source contributions."
+      ]
     }
   ],
   "certificates": [
