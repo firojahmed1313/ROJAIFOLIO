@@ -128,7 +128,7 @@
           </div>
           <div className="proj-body">
             <h3 className="proj-title">{project.title}</h3>
-            <p className="proj-desc">{project.description.slice(0, 3).map((desc, i) => <span key={i}>{i + 1}. {desc} <br /></span>)}</p>
+            <p className="proj-desc">{project.description.map((desc, i) => <span key={i}>{i + 1}. {desc} <br /></span>)}</p>
             <div className="proj-tech">
               {project.tech.map((t, i) => <span key={i} className="t-tag">{t}</span>)}
             </div>

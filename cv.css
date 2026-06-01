@@ -305,7 +305,7 @@ input:checked~div #languages label {
 #contact-mini {
     display: flex;
     margin-top: 1rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 #contact-mini>div {
@@ -331,13 +331,98 @@ input:not(:checked)~div #languages label[for]::before {
     display: none;
 }
 
+/* ── DOWNLOAD BUTTONS ── */
+.download-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 10px;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid var(--border2);
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent);
+    transition: 0.5s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
+.download-btn.download-cv {
+    border-color: rgba(0, 212, 255, 0.25);
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(0, 212, 255, 0.04) 100%);
+    color: var(--cyan);
+}
+
+.download-btn.download-cv:hover {
+    border-color: var(--cyan);
+    background: linear-gradient(135deg, var(--cyan-dim) 0%, rgba(0, 212, 255, 0.12) 100%);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.download-btn.download-ppt {
+    border-color: rgba(168, 85, 247, 0.25);
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(168, 85, 247, 0.04) 100%);
+    color: var(--purple);
+}
+
+.download-btn.download-ppt:hover {
+    border-color: var(--purple);
+    background: linear-gradient(135deg, var(--purple-dim) 0%, rgba(168, 85, 247, 0.12) 100%);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    transform: translateY(-2px);
+}
+
+.icon-download {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover .icon-download {
+    transform: translateY(2px);
+}
+
+
 @media all and (min-width: 630px) {
     main {
         max-width: 600px;
     }
 
     #contact-mini>div {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -476,5 +561,9 @@ input:not(:checked)~div #languages label[for]::before {
 
     #contact {
         display: block;
+    }
+
+    .download-actions {
+        display: none !important;
     }
 }
